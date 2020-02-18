@@ -1,0 +1,22 @@
+﻿<h3>Reading from AzureBlob</h3>
+
+@model IEnumerable<string>
+<div class="col-lg-12">
+    <h2>Price List</h2>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>FineName</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

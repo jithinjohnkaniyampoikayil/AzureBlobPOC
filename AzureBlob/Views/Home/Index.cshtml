@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h4>Upload Price List</h4>
+    
+        @using (Html.BeginForm("Index",
+                        "Home",
+                        FormMethod.Post,
+                        new { enctype = "multipart/form-data" }))
+        {
+            <div class="form-group">
+                <input type="file" name="file" class="form-control" id="fileinput" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required>
+                @if (ViewBag.Message != null)
+                {
+                    <small id="nofif" class="form-text text-muted">@ViewBag.Message.</small>
+                }
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        }
+        
+</div>

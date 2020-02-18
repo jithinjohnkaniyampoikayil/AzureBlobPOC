@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Model.ViewModel.PriceViewModel>
+<div class="col-lg-12">
+    <h2>Price List</h2>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Price</th>
+            </tr>
+           
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Date</td>
+                    <td>@item.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
